@@ -1,0 +1,147 @@
+/*----------------------------------------------------------------------------------------------
+                                            GENERAL
+------------------------------------------------------------------------------------------------*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.clearfix::after {
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+body{
+    background-image: linear-gradient(rgba(62,20,20,0.4) , rgba(62,20,20,0.4)) , url(images/back.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: Lato;
+    font-weight: 100;
+    position: relative;
+    color: #555;
+    height: 100vh;
+}
+
+.wrapper{
+    width: 1000px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    overflow: hidden;
+}
+
+.player-1-panel , .player-2-panel
+{
+    display: block;
+    width: 50%;
+    float: left;
+    height: auto;
+    padding: 100px;
+}
+
+/*----------------------------------------------------------------------------------------------
+                                            PLAYERS
+------------------------------------------------------------------------------------------------*/
+
+.player-name{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 40px;
+}
+
+
+
+.active{
+    background-color: #f2f2f2;
+}
+
+.active .player-name{
+    font-weight: 300;
+}
+
+.active .player-name::after{
+    content: "\2022";
+    color: #ff3a67;
+    position: relative;
+    top: -5px;
+    left: 10px;
+}
+
+.player-score
+{
+    padding: 22px 0;
+    font-size: 80px;
+    color: #ff3a67;
+    text-align: center;
+    padding-bottom: 70px;
+}
+
+.player-current-box{
+    background-color: #ff3a67;
+    font-weight: 550;
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.current-label{
+    padding-top: 5px;
+    color: #555;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+.current-score{
+    padding: 8px 0;
+    color: #fff;
+    font-size: 32px;
+}
+
+/*---------------------DICE---------------------*/
+
+.dice{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 178px;
+    height: 100px;
+    box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.20);
+}
+
+/*---------------------BUTTONS---------------------*/
+
+button{
+    position: absolute;
+    width: 200px;
+    left: 50%;
+    transform: translate(-50%);
+    color: #555;
+    background: none;
+    border: none;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 300;
+    font-family: Lato;
+    cursor: pointer;
+    transition: font-weight 0.2s;
+}
+
+button:focus{ outline: none;}
+
+/*--------------------WINNER------------------------*/
+
+.winner { background-color: #f7f7f7; }
+
+.winner .player-name { font-weight: 300; color: #ff3a67; }
+
+
+button:hover{font-weight: 600;}
+
+.btn-new { top: 45px;}
+.btn-roll { top: 403px;}
+.btn-hold { top: 467px;}
